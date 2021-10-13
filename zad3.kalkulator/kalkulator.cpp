@@ -1,13 +1,13 @@
 #include "iostream"
 #include <fstream>
-#include "string"
+#include "cstring"
 
 using namespace std;
 
 void docu(){
     ifstream f("doc.txt");
     if(f.is_open())
-        cout << f.rdbuf();
+        cout << "\n" << f.rdbuf() << "\n\n";
 }
 
 void err(){
@@ -16,38 +16,37 @@ void err(){
 }
 
 int main(int argc, char *argv[]){
-    string operation = argv[1];
-    if(!strcmp(operation, "add")){
+    if(!strcmp(argv[1], "add")){
         if(argc != 4){
             err();
             return 0;
         }
         else{
-            cout << argv[2] + argv[3];
+            cout << "\n" << atoi(argv[2])+ atoi(argv[3]);
             return 0;
         }
     }
-    else if(!strcmp(operation, "subtract")){
+    else if(!strcmp(argv[1], "subtract")){
         if(argc != 4){
             err();
             return 0;
         }
         else{
-            cout << argv[2] - argv[3];
+            cout << "\n" << atoi(argv[2]) - atoi(argv[3]);
             return 0;
         }
     }
-    else if(!strcmp(operation, "volume")){
+    else if(!strcmp(argv[1], "volume")){
         if(argc != 6){
             err();
             return 0;
         }
         else{
-            cout << 0.5*(argv[2] + argv[3])*argv[4]*argv[5];
+            cout << "\n" << 0.5*(atoi(argv[2]) + atoi(argv[3]))*atoi(argv[4])*atoi(argv[5]);
             return 0;
         }
     }
-    else if(!strcmp(operation, "help")){
+    else if(!strcmp(argv[1], "help")){
         if(argc != 2){
             err();
             return 0;
