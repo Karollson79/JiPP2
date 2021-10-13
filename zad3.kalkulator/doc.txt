@@ -1,0 +1,12 @@
+Simple calculator
+simpleCalc [nazwa działania]
+
+Dzialania:
+add [a] [b]
+    Dodawanaie dwoch liczbb ([a] i [b]) calkowitych.
+substract [a] [b]
+    Odejmowanie dwoch liczb ([a] i [b]) calkowitych.
+volume [a] [b] [h] [H]
+    Oliczanie objetosci graniastoslupa prostego o podstawie trapezu i wysokosci [H].
+help
+    Wyswielenie dokumentacji.
