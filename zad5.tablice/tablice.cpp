@@ -9,7 +9,7 @@ int random(int a, int b){
 
 int max_tab(int *tab){
     int max = tab[0];
-    for(int i = 1; i < sizeof(tab)/4; ++i){
+    for(int i = 1; i < 10; ++i){
         if(tab[i] > max)
             max = tab[i];
     }
@@ -17,10 +17,9 @@ int max_tab(int *tab){
 }
 
 void reverse(int *tab){
-    int size = sizeof(tab)/4;
-    int last = size - 1;
+    int last = 10 - 1;
     int pom;
-    for(int i = 0; i < size/2; ++i, --last) {
+    for(int i = 0; i < 5; ++i, --last) {
         pom = tab[i];
         tab[i] = tab[last];
         tab[last] = pom;
@@ -43,5 +42,5 @@ int main(){
     for(int i = 0; i < 10; ++i){
         cout << tab[i] << " ";
     }
-    cout << "najwieksza wartosc tablicy to: " << max_tab(tab);
+    cout << "\nnajwieksza wartosc tablicy to: " << max_tab(tab);
 }
