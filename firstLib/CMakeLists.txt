@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.12.3)
+
+project(firstLib)
+
+add_subdirectory(App)
+add_subdirectory(Library)
