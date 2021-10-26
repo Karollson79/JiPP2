@@ -16,14 +16,14 @@ struct samochod{
 void count_elememts(samochod *tab, int no_ele){
     map <string, int> pom;
     for(int i = 0; i < no_ele; ++i){
-        ++map[tab[i].marka];
+        ++pom[tab[i].marka];
     }
-    cout << map["Audi"];
+    for(auto c : pom){
+        cout << c.first << " = " << c.second << "\n";
+    }
 }
 
 int main(){
-    samochod cars[4] = {{"Audi", "A4", "czarny", 2000}, {"Audi", "A7", "bialy", 2009}, {"Audi", "A6", "czarny", 2010}, {"Audi", "A8", "srebrny", 2019}};
-    for(int i = 0; i < 4; ++i)
-        cout << cars[i].marka <<"\t"<< cars[i].model <<"\t" << cars[i].kolor <<"\t\t"<<cars[i].rok_produkcji<< "\n";
+    samochod cars[4] = {{"Audi", "A4", "czarny", 2000}, {"BWM", "E36", "bialy", 2009}, {"Mazda", "6", "czarny", 2010}, {"Mazda", "A8", "srebrny", 2019}};
     count_elememts(cars, 4);
 }
