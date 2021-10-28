@@ -18,6 +18,7 @@ public:
     int procent_poprawnych(){
         return (poprawne_odpowiedzi*100)/liczba_pytan;
     }
+
 };
 
 int main(){
