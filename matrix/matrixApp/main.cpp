@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
             if(!(cin >> col >> row)){
                 cout << "ERROR: nieodpowiedni znak.";
                 return 0;
-            };
+            }
             if (type == 1) {
 
                 // tworzymy macierze
@@ -46,6 +46,10 @@ int main(int argc, char *argv[]) {
                 // wyswietlamy wynik
                 cout << "\n\nMACIERZ WYNIKOWA (A + B):\n\n";
                 displayMatrix(answer, row, col);
+
+                // zwalniamy zaalokwana pamiec
+                freeMatrix(new_matrixA, row);
+                freeMatrix(new_matrixB, row);
             } else {
                 // dla macierzy int
                 int **new_matrixA = createMatrix(row, col);
@@ -61,6 +65,8 @@ int main(int argc, char *argv[]) {
                 int **answer = addMatrix(new_matrixA, new_matrixB, row, col);
                 cout << "\n\nMACIERZ WYNIKOWA (A + B):\n\n";
                 displayMatrix(answer, row, col);
+                freeMatrix(new_matrixA, row);
+                freeMatrix(new_matrixB, row);
             }
         }
     } else if (!strcmp(argv[1], "subtractMatrix")) { //                             ODEJMOWANIE MACIERZY
@@ -104,6 +110,9 @@ int main(int argc, char *argv[]) {
                 // wyswietlamy wynik
                 cout << "\n\nMACIERZ WYNIKOWA (A - B):\n\n";
                 displayMatrix(answer, row, col);
+
+                freeMatrix(new_matrixA, row);
+                freeMatrix(new_matrixB, row);
             } else {
 
                 // dla macierzy int
@@ -118,8 +127,12 @@ int main(int argc, char *argv[]) {
                 cout << "\n\nMACIERZ B: \n\n";
                 displayMatrix(new_matrixB, row, col);
                 int **answer = subtractMatrix(new_matrixA, new_matrixB, row, col);
+
                 cout << "\n\nMACIERZ WYNIKOWA (A - B):\n\n";
                 displayMatrix(answer, row, col);
+
+                freeMatrix(new_matrixA, row);
+                freeMatrix(new_matrixB, row);
             }
         }
     } else if (!strcmp(argv[1], "multiplyMatrix")) { //                             MNOZENIE MACIERZY
@@ -168,6 +181,9 @@ int main(int argc, char *argv[]) {
                 // wyswietlamy wynik
                 cout << "\n\nMACIERZ WYNIKOWA (A * B):\n\n";
                 displayMatrix(answer, rowA, colB);
+
+                freeMatrix(new_matrixA, rowA);
+                freeMatrix(new_matrixB, rowB);
             } else {
 
                 // dla macierzy int
@@ -184,6 +200,8 @@ int main(int argc, char *argv[]) {
                 int **answer = multiplyMatrix(new_matrixA, new_matrixB, rowA, colA, colB);
                 cout << "\n\nMACIERZ WYNIKOWA (A * B):\n\n";
                 displayMatrix(answer, rowA, colB);
+                freeMatrix(new_matrixA, rowA);
+                freeMatrix(new_matrixB, rowB);
             }
         }
     } else if (!strcmp(argv[1], "multiplyByScalar")) { //                       MNOZENIE MACIERZY PRZEZ SKALAR
@@ -230,6 +248,8 @@ int main(int argc, char *argv[]) {
                 // wyswietlamy wynik
                 cout << "\n\nMACIERZ WYNIKOWA (x * A):\n\n";
                 displayMatrix(answer, row, col);
+
+                freeMatrix(new_matrixA, row);
             } else {
                 // dla macierzy int
                 int **new_matrixA = createMatrix(row, col);
@@ -246,6 +266,8 @@ int main(int argc, char *argv[]) {
                 int **answer = multiplyByScalar(new_matrixA, row, col, scalar);
                 cout << "\n\nMACIERZ WYNIKOWA (x * A):\n\n";
                 displayMatrix(answer, row, col);
+
+                freeMatrix(new_matrixA, row);
             }
         }
     } else if (!strcmp(argv[1], "transpozeMatrix")) { //                            TRANSPONOWANIE MACIERZY
@@ -284,6 +306,8 @@ int main(int argc, char *argv[]) {
                 // wyswietlamy wynik
                 cout << "\n\nMACIERZ TRANSPONOWANA:\n\n";
                 displayMatrix(answer, row, col);
+
+                freeMatrix(new_matrixA, row);
             } else {
                 // dla macierzy int
                 int **new_matrixA = createMatrix(row, col);
@@ -294,6 +318,7 @@ int main(int argc, char *argv[]) {
                 int **answer = transpozeMatrix(new_matrixA, row, col);
                 cout << "\n\nMACIERZ TRANSPONOWANA:\n\n";
                 displayMatrix(answer, row, col);
+                freeMatrix(new_matrixA, row);
             }
         }
     } else if (!strcmp(argv[1], "powerMatrix")) { //                                 POTEGOWANIE MACIERZY
@@ -332,6 +357,8 @@ int main(int argc, char *argv[]) {
                 // wyswietlamy wynik
                 cout << "\n\nMACIERZ WYNIKOWA (A^" << pow << "):\n\n";
                 displayMatrix(answer, row, col);
+
+                freeMatrix(new_matrixA, row);
             } else {
                 // dla macierzy int
                 int **new_matrixA = createMatrix(row, col);
@@ -343,6 +370,7 @@ int main(int argc, char *argv[]) {
                 int **answer = powerMatrix(new_matrixA, row, col, pow);
                 cout << "\n\nMACIERZ WYNIKOWA (A^" << pow << "):\n\n";
                 displayMatrix(answer, row, col);
+                freeMatrix(new_matrixA, row);
             }
         }
     } else if (!strcmp(argv[1], "determinantMatrix")) { //                               WYZNACZNIK MACIERZY
@@ -380,6 +408,8 @@ int main(int argc, char *argv[]) {
 
                 // wyswietlamy wynik
                 cout << "\n\nWYZNACZNIK MACIERZY A = " << answer << ".\n\n";
+
+                freeMatrix(new_matrixA, row);
             } else {
                 // dla macierzy int
                 int **new_matrixA = createMatrix(row, col);
@@ -389,6 +419,7 @@ int main(int argc, char *argv[]) {
                 displayMatrix(new_matrixA, row, col);
                 int answer = determinantMatrix(new_matrixA, row, col);
                 cout << "\n\nWYZNACZNIK MACIERZY A = " << answer << ".\n\n";
+                freeMatrix(new_matrixA, row);
             }
         }
     } else if (!strcmp(argv[1], "matrixIsDiagonal")) { //                           CZY MACIERZ JEST DIAGONALNA
@@ -429,6 +460,7 @@ int main(int argc, char *argv[]) {
                     cout << "\n\nMACIERZ A JEST DIAGONALNA.\n\n";
                 else
                     cout << "\n\nMACIERZ A NIE JEST DIAGONALNA.\n\n";
+                freeMatrix(new_matrixA, row);
             } else {
                 // dla macierzy int
                 int **new_matrixA = createMatrix(row, col);
@@ -441,6 +473,7 @@ int main(int argc, char *argv[]) {
                     cout << "\n\nMACIERZ A JEST DIAGONALNA.\n\n";
                 else
                     cout << "\n\nMACIERZ A NIE JEST DIAGONALNA.\n\n";
+                freeMatrix(new_matrixA, row);
             }
         }
     } else if (!strcmp(argv[1], "sortRowsInMatrix")) { //                                    SORTOWANIE MACIERZY
@@ -479,6 +512,8 @@ int main(int argc, char *argv[]) {
                 // wyswietlamy wynik
                 cout << "\n\nMACIERZ POSORTOWANA:\n\n";
                 displayMatrix(answer, row, col);
+
+                freeMatrix(new_matrixA, row);
             } else {
                 // dla macierzy int
                 int **new_matrixA = createMatrix(row, col);
@@ -489,6 +524,7 @@ int main(int argc, char *argv[]) {
                 int **answer = sortRowsInMatrix(new_matrixA, row, col);
                 cout << "\n\nMACIERZ POSORTOWANA:\n\n";
                 displayMatrix(answer, row, col);
+                freeMatrix(new_matrixA, row);
             }
         }
     }else if(!strcmp(argv[1], "help")){ //                                  HELP
