@@ -71,19 +71,112 @@ CMAKE_BINARY_DIR = C:\Users\papasmerf\Desktop\studia\jipp2\laby\JiPP2\matrix\cma
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: matrixApp/all
+all: matrixLib/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: matrixApp/preinstall
+preinstall: matrixLib/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean:
+clean: matrixApp/clean
+clean: matrixLib/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory matrixApp
+
+# Recursive "all" directory target.
+matrixApp/all: matrixApp/CMakeFiles/matrixApp.dir/all
+
+.PHONY : matrixApp/all
+
+# Recursive "preinstall" directory target.
+matrixApp/preinstall:
+
+.PHONY : matrixApp/preinstall
+
+# Recursive "clean" directory target.
+matrixApp/clean: matrixApp/CMakeFiles/matrixApp.dir/clean
+
+.PHONY : matrixApp/clean
+
+#=============================================================================
+# Directory level rules for directory matrixLib
+
+# Recursive "all" directory target.
+matrixLib/all: matrixLib/CMakeFiles/matrixLibLib.dir/all
+
+.PHONY : matrixLib/all
+
+# Recursive "preinstall" directory target.
+matrixLib/preinstall:
+
+.PHONY : matrixLib/preinstall
+
+# Recursive "clean" directory target.
+matrixLib/clean: matrixLib/CMakeFiles/matrixLibLib.dir/clean
+
+.PHONY : matrixLib/clean
+
+#=============================================================================
+# Target rules for target matrixApp/CMakeFiles/matrixApp.dir
+
+# All Build rule for target.
+matrixApp/CMakeFiles/matrixApp.dir/all: matrixLib/CMakeFiles/matrixLibLib.dir/all
+	$(MAKE) $(MAKESILENT) -f matrixApp\CMakeFiles\matrixApp.dir\build.make matrixApp/CMakeFiles/matrixApp.dir/depend
+	$(MAKE) $(MAKESILENT) -f matrixApp\CMakeFiles\matrixApp.dir\build.make matrixApp/CMakeFiles/matrixApp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\papasmerf\Desktop\studia\jipp2\laby\JiPP2\matrix\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target matrixApp"
+.PHONY : matrixApp/CMakeFiles/matrixApp.dir/all
+
+# Build rule for subdir invocation for target.
+matrixApp/CMakeFiles/matrixApp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\papasmerf\Desktop\studia\jipp2\laby\JiPP2\matrix\cmake-build-debug\CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 matrixApp/CMakeFiles/matrixApp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\papasmerf\Desktop\studia\jipp2\laby\JiPP2\matrix\cmake-build-debug\CMakeFiles 0
+.PHONY : matrixApp/CMakeFiles/matrixApp.dir/rule
+
+# Convenience name for target.
+matrixApp: matrixApp/CMakeFiles/matrixApp.dir/rule
+
+.PHONY : matrixApp
+
+# clean rule for target.
+matrixApp/CMakeFiles/matrixApp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f matrixApp\CMakeFiles\matrixApp.dir\build.make matrixApp/CMakeFiles/matrixApp.dir/clean
+.PHONY : matrixApp/CMakeFiles/matrixApp.dir/clean
+
+#=============================================================================
+# Target rules for target matrixLib/CMakeFiles/matrixLibLib.dir
+
+# All Build rule for target.
+matrixLib/CMakeFiles/matrixLibLib.dir/all:
+	$(MAKE) $(MAKESILENT) -f matrixLib\CMakeFiles\matrixLibLib.dir\build.make matrixLib/CMakeFiles/matrixLibLib.dir/depend
+	$(MAKE) $(MAKESILENT) -f matrixLib\CMakeFiles\matrixLibLib.dir\build.make matrixLib/CMakeFiles/matrixLibLib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\papasmerf\Desktop\studia\jipp2\laby\JiPP2\matrix\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target matrixLibLib"
+.PHONY : matrixLib/CMakeFiles/matrixLibLib.dir/all
+
+# Build rule for subdir invocation for target.
+matrixLib/CMakeFiles/matrixLibLib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\papasmerf\Desktop\studia\jipp2\laby\JiPP2\matrix\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 matrixLib/CMakeFiles/matrixLibLib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\papasmerf\Desktop\studia\jipp2\laby\JiPP2\matrix\cmake-build-debug\CMakeFiles 0
+.PHONY : matrixLib/CMakeFiles/matrixLibLib.dir/rule
+
+# Convenience name for target.
+matrixLibLib: matrixLib/CMakeFiles/matrixLibLib.dir/rule
+
+.PHONY : matrixLibLib
+
+# clean rule for target.
+matrixLib/CMakeFiles/matrixLibLib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f matrixLib\CMakeFiles\matrixLibLib.dir\build.make matrixLib/CMakeFiles/matrixLibLib.dir/clean
+.PHONY : matrixLib/CMakeFiles/matrixLibLib.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

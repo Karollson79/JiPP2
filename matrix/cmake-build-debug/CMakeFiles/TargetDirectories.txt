@@ -1,2 +1,8 @@
 C:/Users/papasmerf/Desktop/studia/jipp2/laby/JiPP2/matrix/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/papasmerf/Desktop/studia/jipp2/laby/JiPP2/matrix/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/papasmerf/Desktop/studia/jipp2/laby/JiPP2/matrix/cmake-build-debug/matrixApp/CMakeFiles/matrixApp.dir
+C:/Users/papasmerf/Desktop/studia/jipp2/laby/JiPP2/matrix/cmake-build-debug/matrixApp/CMakeFiles/edit_cache.dir
+C:/Users/papasmerf/Desktop/studia/jipp2/laby/JiPP2/matrix/cmake-build-debug/matrixApp/CMakeFiles/rebuild_cache.dir
+C:/Users/papasmerf/Desktop/studia/jipp2/laby/JiPP2/matrix/cmake-build-debug/matrixLib/CMakeFiles/matrixLibLib.dir
+C:/Users/papasmerf/Desktop/studia/jipp2/laby/JiPP2/matrix/cmake-build-debug/matrixLib/CMakeFiles/edit_cache.dir
+C:/Users/papasmerf/Desktop/studia/jipp2/laby/JiPP2/matrix/cmake-build-debug/matrixLib/CMakeFiles/rebuild_cache.dir

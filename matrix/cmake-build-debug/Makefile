@@ -128,6 +128,32 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named matrixApp
+
+# Build rule for target.
+matrixApp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 matrixApp
+.PHONY : matrixApp
+
+# fast build rule for target.
+matrixApp/fast:
+	$(MAKE) $(MAKESILENT) -f matrixApp\CMakeFiles\matrixApp.dir\build.make matrixApp/CMakeFiles/matrixApp.dir/build
+.PHONY : matrixApp/fast
+
+#=============================================================================
+# Target rules for targets named matrixLibLib
+
+# Build rule for target.
+matrixLibLib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 matrixLibLib
+.PHONY : matrixLibLib
+
+# fast build rule for target.
+matrixLibLib/fast:
+	$(MAKE) $(MAKESILENT) -f matrixLib\CMakeFiles\matrixLibLib.dir\build.make matrixLib/CMakeFiles/matrixLibLib.dir/build
+.PHONY : matrixLibLib/fast
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -136,6 +162,8 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... matrixApp
+	@echo ... matrixLibLib
 .PHONY : help
 
 
