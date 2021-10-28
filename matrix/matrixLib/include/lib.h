@@ -8,8 +8,14 @@ using namespace std;
 void help();
 void err();
 
+void displayMatrix(int **matrix, int row, int col);
+void displayMatrix(double **matrix, int row, int col);
+
 int **createMatrix(int row, int col);
 double **createMatrix_double(int row, int col);
+
+void freeMatrix(int **matrix, int row);
+void freeMatrix(double **matrix, int row);
 
 void fillMatrix(int **matrix, int row, int col);
 void fillMatrix(double **matrix, int row, int col);

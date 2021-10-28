@@ -1,19 +1,58 @@
 #include "iostream"
 #include "algorithm"
-#include "fstream"
 #include "../include/lib.h"
 
 using namespace std;
 
 void help() {
-    ifstream f("../../help.txt");
-    if (f.is_open())
-        cout << "\n" << f.rdbuf() << "\n\n";
+    cout << "\n\nKalkulator macierzy:" << endl;
+    cout << "matrixApp [nazwa dzialania]"<< endl << endl;
+
+    cout << "Dzialania:" << endl;
+
+    cout << "addMatrix" << endl;
+    cout << "\tdodanie macierzy A i B." << endl;
+    cout << "subtractMatrix" << endl;
+    cout << "\todejmowanie macierzy A i B." << endl;
+    cout << "multiplyMatrix" << endl;
+    cout << "\tmnozenie macierzy A i B." << endl;
+    cout << "multiplyByScalar" << endl;
+    cout << "\tmnozenie macierzy przez skalar."<<endl;
+    cout << "transpozeMatrix"<<endl;
+    cout << "\ttransponowanie macierzy." << endl;
+    cout <<  "powerMatrix [pow]" << endl;
+    cout << "\tpotegowanie macierzy, podnosznie macierzy do potegi [pow]." << endl;
+    cout << "determinantMatrix" << endl;
+    cout << "\tobliczanie wyznacznika macierzy." <<endl;
+    cout << "matrixIsDiagonal" << endl;
+    cout << "\tsprawdzenie, czy macierz jest diagonalna." << endl;
+    cout <<"sortRowsInMatrix"<<endl;
+    cout << "\tsortowanie wszystkich wierszy w macierzy rosnaco.";
+    cout << "help" << endl;
+    cout << "\twyswietla dokumentacje programu." << endl;
 }
 
 void err() {
-    cout << "ERROR: wrong number of arguments.\n\n";
+    cout << "ERROR: zla liczba argumentow.\n\n";
     help();
+}
+
+void displayMatrix(int **matrix, int row, int col) {
+    for (int i = 0; i < row; ++i) {
+        for (int j = 0; j < col; ++j) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << "\n";
+    }
+}
+
+void displayMatrix(double **matrix, int row, int col) {
+    for (int i = 0; i < row; ++i) {
+        for (int j = 0; j < col; ++j) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << "\n";
+    }
 }
 
 int **createMatrix(int row, int col) {
@@ -32,20 +71,40 @@ double **createMatrix_double(int row, int col) {
     return new_matrix;
 }
 
-void fillMatrix(int **matrix, int row, int col){
-    for(int i = 0; i  < row; ++i){
-        for(int j = 0; j  < col; ++j){
-            cout << "Podaj liczbe do komorki x = " << j + 1 << " i y = " << i + 1;
-            cin >> matrix[i][j];
+void freeMatrix(int **matrix, int row){
+    for(int i = 0; i < row; ++i)
+        delete []matrix[i];
+    delete []matrix;
+}
+
+void freeMatrix(double **matrix, int row){
+    for(int i = 0; i < row; ++i)
+        delete []matrix[i];
+    delete []matrix;
+}
+
+void fillMatrix(int **matrix, int row, int col) {
+    for (int i = 0; i < row; ++i) {
+        for (int j = 0; j < col; ++j) {
+            cout << "Podaj liczbe do komorki x = " << j + 1 << " i y = " << i + 1 << ":\n";
+            if(!(cin >> matrix[i][j])){
+                cout << "ERROR: nieodpowiedni znak.\n";
+                freeMatrix(matrix, row);
+                exit(1);
+            }
         }
     }
 }
 
-void fillMatrix(double **matrix, int row, int col){
-    for(int i = 0; i  < row; ++i){
-        for(int j = 0; j  < col; ++j){
-            cout << "Podaj liczbe do komorki x = " << j + 1 << " i y = " << i + 1;
-            cin >> matrix[i][j];
+void fillMatrix(double **matrix, int row, int col) {
+    for (int i = 0; i < row; ++i) {
+        for (int j = 0; j < col; ++j) {
+            cout << "Podaj liczbe do komorki x = " << i + 1 << " i y = " << j + 1 << ":\n";
+            if(!(cin >> matrix[i][j])){
+                cout << "ERROR: nieodpowiedni znak.\n";
+                freeMatrix(matrix, row);
+                exit(1);
+            }
         }
     }
 }
@@ -88,7 +147,7 @@ double **subtractMatrix(double **matrix_a, double **matrix_b, int rows, int colu
 
 int **multiplyMatrix(int **matrix_a, int **matrix_b, int rows_first, int columns_first, int columns_second) {
     int **answer = createMatrix(rows_first, columns_second);
-    for(int i = 0; i < rows_first; ++i){
+    for (int i = 0; i < rows_first; ++i) {
 
     }
     for (int i = 0; i < rows_first; ++i) {
@@ -157,16 +216,16 @@ double **transpozeMatrix(double **matrix_a, int rows, int columns) {
 
 int **powerMatrix(int **matrix_a, int rows, int columns, unsigned int power) {
     int **answer = matrix_a;
-    while (power--) {
-        int **tmp = multiplyMatrix(tmp, matrix_a, rows, columns, columns);
+    while (--power) {
+        answer = multiplyMatrix(answer, matrix_a, rows, columns, columns);
     }
     return answer;
 }
 
 double **powerMatrix(double **matrix_a, int rows, int columns, unsigned int power) {
     double **answer = matrix_a;
-    while (power--) {
-        double **tmp = multiplyMatrix(tmp, matrix_a, rows, columns, columns);
+    while (--power) {
+        answer = multiplyMatrix(answer, matrix_a, rows, columns, columns);
     }
     return answer;
 }
@@ -208,11 +267,8 @@ int determinantMatrix(int **matrix, int rows, int columns) {
 
 void subMatrix(double **mat, double **temp, int p, int q, int n) {
     int i = 0, j = 0;
-// filling the sub matrix
     for (int row = 0; row < n; row++) {
         for (int col = 0; col < n; col++) {
-// skipping if the current row or column is not equal to the current
-// element row and column
             if (row != p && col != q) {
                 temp[i][j++] = mat[row][col];
                 if (j == n - 1) {
@@ -225,7 +281,7 @@ void subMatrix(double **mat, double **temp, int p, int q, int n) {
 }
 
 double determinantMatrix(double **matrix, int rows, int columns) {
-    int determinant = 0;
+    double determinant = 0;
     if (rows == 1) {
         return matrix[0][0];
     }
@@ -253,7 +309,7 @@ bool matrixIsDiagonal(int **matrix_a, int rows, int columns) {
             }
         }
     }
-    return ok ? true : false;
+    return ok;
 }
 
 bool matrixIsDiagonal(double **matrix_a, int rows, int columns) {
@@ -268,7 +324,7 @@ bool matrixIsDiagonal(double **matrix_a, int rows, int columns) {
             }
         }
     }
-    return ok ? true : false;
+    return ok;
 }
 
 void swap(int &a, int &b) {
