@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/e1NoCopyingConstructor.dir/src/main.cpp.o CMakeFiles/e1NoCopyingConstructor.dir/src/Point.cpp.o -o e1NoCopyingConstructor 

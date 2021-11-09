@@ -15,6 +15,7 @@ Point::Point(Point &point){
     *x = *point.x;
     *y = *point.y;
 }
+
 Point::~Point(){
     delete x;
     delete y;
