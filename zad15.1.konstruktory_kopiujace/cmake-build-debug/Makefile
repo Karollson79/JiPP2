@@ -153,6 +153,30 @@ src/Point.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/e1NoCopyingConstructor.dir/build.make CMakeFiles/e1NoCopyingConstructor.dir/src/Point.cpp.s
 .PHONY : src/Point.cpp.s
 
+src/Pojazd.o: src/Pojazd.cpp.o
+.PHONY : src/Pojazd.o
+
+# target to build an object file
+src/Pojazd.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/e1NoCopyingConstructor.dir/build.make CMakeFiles/e1NoCopyingConstructor.dir/src/Pojazd.cpp.o
+.PHONY : src/Pojazd.cpp.o
+
+src/Pojazd.i: src/Pojazd.cpp.i
+.PHONY : src/Pojazd.i
+
+# target to preprocess a source file
+src/Pojazd.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/e1NoCopyingConstructor.dir/build.make CMakeFiles/e1NoCopyingConstructor.dir/src/Pojazd.cpp.i
+.PHONY : src/Pojazd.cpp.i
+
+src/Pojazd.s: src/Pojazd.cpp.s
+.PHONY : src/Pojazd.s
+
+# target to generate assembly for a file
+src/Pojazd.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/e1NoCopyingConstructor.dir/build.make CMakeFiles/e1NoCopyingConstructor.dir/src/Pojazd.cpp.s
+.PHONY : src/Pojazd.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -189,6 +213,9 @@ help:
 	@echo "... src/Point.o"
 	@echo "... src/Point.i"
 	@echo "... src/Point.s"
+	@echo "... src/Pojazd.o"
+	@echo "... src/Pojazd.i"
+	@echo "... src/Pojazd.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

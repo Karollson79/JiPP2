@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/cinamon/studia/JIPP2/JiPP2/zad15.1.konstruktory_kopiujace/src/Point.cpp" "/home/cinamon/studia/JIPP2/JiPP2/zad15.1.konstruktory_kopiujace/cmake-build-debug/CMakeFiles/e1NoCopyingConstructor.dir/src/Point.cpp.o"
+  "/home/cinamon/studia/JIPP2/JiPP2/zad15.1.konstruktory_kopiujace/src/Pojazd.cpp" "/home/cinamon/studia/JIPP2/JiPP2/zad15.1.konstruktory_kopiujace/cmake-build-debug/CMakeFiles/e1NoCopyingConstructor.dir/src/Pojazd.cpp.o"
   "/home/cinamon/studia/JIPP2/JiPP2/zad15.1.konstruktory_kopiujace/src/main.cpp" "/home/cinamon/studia/JIPP2/JiPP2/zad15.1.konstruktory_kopiujace/cmake-build-debug/CMakeFiles/e1NoCopyingConstructor.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

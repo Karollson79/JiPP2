@@ -84,7 +84,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/cinamon/studia/JIPP2/JiPP2/zad15.1.konstruktory_kopiujace/include/Pojazd.h">
+			<Option target="e1NoCopyingConstructor"/>
+		</Unit>
 		<Unit filename="/home/cinamon/studia/JIPP2/JiPP2/zad15.1.konstruktory_kopiujace/src/Point.cpp">
+			<Option target="e1NoCopyingConstructor"/>
+		</Unit>
+		<Unit filename="/home/cinamon/studia/JIPP2/JiPP2/zad15.1.konstruktory_kopiujace/src/Pojazd.cpp">
 			<Option target="e1NoCopyingConstructor"/>
 		</Unit>
 		<Unit filename="/home/cinamon/studia/JIPP2/JiPP2/zad15.1.konstruktory_kopiujace/src/main.cpp">

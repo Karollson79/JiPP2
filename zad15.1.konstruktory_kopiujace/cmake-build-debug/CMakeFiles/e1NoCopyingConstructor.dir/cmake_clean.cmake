@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/e1NoCopyingConstructor.dir/src/Point.cpp.o"
+  "CMakeFiles/e1NoCopyingConstructor.dir/src/Pojazd.cpp.o"
   "CMakeFiles/e1NoCopyingConstructor.dir/src/main.cpp.o"
   "e1NoCopyingConstructor"
   "e1NoCopyingConstructor.pdb"
