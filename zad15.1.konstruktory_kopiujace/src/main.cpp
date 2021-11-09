@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Point.h"
+#include "Pojazd.h"
 
 using namespace std;
 
@@ -45,6 +46,13 @@ int main() {
         p2c.printData();
     }
 
+    {
+        Pojazd nr1("jeden", "dwa", 4, "trzy", "cztery");
+        Pojazd nr2("jeden", "dwa", 5, "trzy", "cztery");
+        nr1.wypiszPojazd();
+        cout << "\n";
+        nr2.wypiszPojazd();
+    }
 
     cout << "End program" << endl;
 
