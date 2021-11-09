@@ -1,0 +1,4 @@
+/snap/clion/169/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/cinamon/studia/JIPP2/JiPP2/zad15.1.konstruktory_kopiujace
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/cinamon/studia/JIPP2/JiPP2/zad15.1.konstruktory_kopiujace/cmake-build-debug

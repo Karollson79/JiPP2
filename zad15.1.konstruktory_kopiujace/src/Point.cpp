@@ -9,6 +9,17 @@ Point::Point(double x, double y, string name) : name(name) {
     *this->y = y;
 }
 
+Point::Point(Point &point){
+    x = new double;
+    y = new double;
+    *x = *point.x;
+    *y = *point.y;
+}
+Point::~Point(){
+    delete x;
+    delete y;
+}
+
 Point::Point(string name) : name(name) {
     *x = *y = 0;
 }

@@ -19,13 +19,13 @@ public:
      * @param name name of point
      */
     Point(double x, double y, string name);
-
+    Point(Point &point);
+    ~Point();
     /**
      * Create point in 0, 0
      * @param name name of point
      */
     Point(string name);
-
     /**
      * Update name of point
      * @param name new point name
