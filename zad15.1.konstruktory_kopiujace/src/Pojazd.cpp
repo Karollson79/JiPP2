@@ -44,12 +44,12 @@ void Pojazd::wypiszPojazd() {
     for(int i = 0; i < this->ilosc_miejsc; ++i){
         cout << i + 1 << ". " << this->pasazerowie[i] << "\n";
     }
-    cout << "marka: " << this->marka;
-    cout << "typ: " << this->typ;
+    cout << "marka: " << this->marka << endl;
+    cout << "typ: " << this->typ << endl;
 }
 
 void Pojazd::zmienPasazera(int num, string pasazer) {
-    this->pasazerowie[num + 1] = pasazer;
+    this->pasazerowie[num - 1] = pasazer;
 }
 
 string Pojazd::getNazwa() {

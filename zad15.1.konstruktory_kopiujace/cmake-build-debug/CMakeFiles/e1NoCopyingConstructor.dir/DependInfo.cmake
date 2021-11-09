@@ -1,26 +1,18 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
   "CXX"
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/cinamon/studia/JIPP2/JiPP2/zad15.1.konstruktory_kopiujace/src/Point.cpp" "/home/cinamon/studia/JIPP2/JiPP2/zad15.1.konstruktory_kopiujace/cmake-build-debug/CMakeFiles/e1NoCopyingConstructor.dir/src/Point.cpp.o"
-  "/home/cinamon/studia/JIPP2/JiPP2/zad15.1.konstruktory_kopiujace/src/Pojazd.cpp" "/home/cinamon/studia/JIPP2/JiPP2/zad15.1.konstruktory_kopiujace/cmake-build-debug/CMakeFiles/e1NoCopyingConstructor.dir/src/Pojazd.cpp.o"
-  "/home/cinamon/studia/JIPP2/JiPP2/zad15.1.konstruktory_kopiujace/src/main.cpp" "/home/cinamon/studia/JIPP2/JiPP2/zad15.1.konstruktory_kopiujace/cmake-build-debug/CMakeFiles/e1NoCopyingConstructor.dir/src/main.cpp.o"
+  "C:/Users/papasmerf/CLionProjects/JiPP2/zad15.1.konstruktory_kopiujace/src/Point.cpp" "C:/Users/papasmerf/CLionProjects/JiPP2/zad15.1.konstruktory_kopiujace/cmake-build-debug/CMakeFiles/e1NoCopyingConstructor.dir/src/Point.cpp.obj"
+  "C:/Users/papasmerf/CLionProjects/JiPP2/zad15.1.konstruktory_kopiujace/src/Pojazd.cpp" "C:/Users/papasmerf/CLionProjects/JiPP2/zad15.1.konstruktory_kopiujace/cmake-build-debug/CMakeFiles/e1NoCopyingConstructor.dir/src/Pojazd.cpp.obj"
+  "C:/Users/papasmerf/CLionProjects/JiPP2/zad15.1.konstruktory_kopiujace/src/main.cpp" "C:/Users/papasmerf/CLionProjects/JiPP2/zad15.1.konstruktory_kopiujace/cmake-build-debug/CMakeFiles/e1NoCopyingConstructor.dir/src/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
-  )
-
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
   )
 
 # Targets to which this target links.

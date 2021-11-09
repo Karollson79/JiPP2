@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Point.h
+iostream
+-
+
+../include/Pojazd.h
+iostream
+../include/iostream
+
+C:/Users/papasmerf/CLionProjects/JiPP2/zad15.1.konstruktory_kopiujace/src/main.cpp
+iostream
+-
+Point.h
+C:/Users/papasmerf/CLionProjects/JiPP2/zad15.1.konstruktory_kopiujace/src/Point.h
+Pojazd.h
+C:/Users/papasmerf/CLionProjects/JiPP2/zad15.1.konstruktory_kopiujace/src/Pojazd.h
+

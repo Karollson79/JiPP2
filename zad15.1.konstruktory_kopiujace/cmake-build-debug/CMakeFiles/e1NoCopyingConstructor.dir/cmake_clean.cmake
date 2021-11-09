@@ -1,9 +1,11 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/e1NoCopyingConstructor.dir/src/Point.cpp.o"
-  "CMakeFiles/e1NoCopyingConstructor.dir/src/Pojazd.cpp.o"
-  "CMakeFiles/e1NoCopyingConstructor.dir/src/main.cpp.o"
-  "e1NoCopyingConstructor"
+  "CMakeFiles/e1NoCopyingConstructor.dir/src/Point.cpp.obj"
+  "CMakeFiles/e1NoCopyingConstructor.dir/src/Pojazd.cpp.obj"
+  "CMakeFiles/e1NoCopyingConstructor.dir/src/main.cpp.obj"
+  "e1NoCopyingConstructor.exe"
+  "e1NoCopyingConstructor.exe.manifest"
   "e1NoCopyingConstructor.pdb"
+  "libe1NoCopyingConstructor.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

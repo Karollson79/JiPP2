@@ -20,7 +20,6 @@ int main() {
         cout << "Initial values" << endl;
         p1.printData();
         p2.printData();
-
         cout << endl << "Create copy of point" << endl;
         Point p1c = p1, p2c = p2;
         //Update copied points names
@@ -47,15 +46,34 @@ int main() {
     }
 
     {
-        Pojazd nr1("jeden", "dwa", 4, "trzy", "cztery");
-        Pojazd nr2("jeden", "dwa", 5, "trzy", "cztery");
+        Pojazd nr1("aaa", "bbb", 4, "ccc", "ddd");
+
+        cout << "\nInitial values: \n\n";
         nr1.wypiszPojazd();
-        cout << "\n";
+
+        cout << "\nCopy element: \n\n";
+        Pojazd nr2(nr1);
         nr2.wypiszPojazd();
+
+        // update car name and number
+
+        nr2.setNumerRejestracyjny("KNT2345");
+        nr2.setNazwa("samochod");
+        nr2.zmienPasazera(3, "wojtek");
+
+        // cout updated values
+
+        cout << "\nUpdated values: \n\n";
+        nr2.wypiszPojazd();
+
+        // cout name, register number, name, type
+
+        cout << "\nname: " << nr2.getNazwa() << endl;
+        cout << "nr_rej: " << nr2.getNumerRejestracyjny() << endl;
+        cout << "type: " << nr2.getTyp() << endl;
+        cout << "car type: " << nr2.getMarka() << endl;
     }
 
-    cout << "End program" << endl;
-
-
+    cout << "\nEnd program" << endl;
     return 0;
 }
