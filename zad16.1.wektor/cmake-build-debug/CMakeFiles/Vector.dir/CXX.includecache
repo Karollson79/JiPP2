@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cinamon/Studia/JIPP2/JiPP2/zad16.1.wektor/include/wektor.h
+
+/home/cinamon/Studia/JIPP2/JiPP2/zad16.1.wektor/src/wektor.cpp
+../include/wektor.h
+/home/cinamon/Studia/JIPP2/JiPP2/zad16.1.wektor/include/wektor.h
+math.h
+/home/cinamon/Studia/JIPP2/JiPP2/zad16.1.wektor/src/math.h
+iostream
+/home/cinamon/Studia/JIPP2/JiPP2/zad16.1.wektor/src/iostream
+

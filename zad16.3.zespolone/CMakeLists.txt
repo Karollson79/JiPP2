@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(Vector)
+project(Zespolone)
 
 include_directories(include)
 
-add_executable(Vector src/main.cpp src/Zespolone.cpp include/Zespolone.h)
+add_executable(Zespolone src/main.cpp src/Zespolone.cpp include/Zespolone.h)

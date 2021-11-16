@@ -28,6 +28,7 @@ public:
 
     Vector operator*(const double &a) const; // mnozenie przez skalar
     Vector &operator*=(const double &a);
+    friend Vector operator*(const double &lhs, const Vector &rhs);
 
     bool operator==(const Vector &rhs) const; // porownywanie wektoro
 

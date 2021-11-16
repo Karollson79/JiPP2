@@ -23,28 +23,20 @@ int main(){
 
     Vector a3 = a1 + a2;
     a3.print();
-    a3 += a1;
-    a3.print();
 
     cout << "Odejmowanie wektorow:\n\n";
 
     a3 = a1 - a2;
-    a3.print();
-    a3 -= a1;
     a3.print();
 
     cout << "Mnozenie przez skalar:\n\n";
 
     a3 = a3 * 2.3;
     a3.print();
-    a3 *= 1.2;
-    a3.print();
 
     cout << "Iloczyn skalarny: \n\n";
 
     a3 = a1^a2;
-    a3.print();
-    a3 ^= a1;
     a3.print();
 
     cout << "Porownywanie wektorow:\n\n";
