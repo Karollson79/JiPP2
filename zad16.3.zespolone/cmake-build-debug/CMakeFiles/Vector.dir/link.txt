@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/Vector.dir/src/main.cpp.o CMakeFiles/Vector.dir/src/Zespolone.cpp.o -o Vector 
