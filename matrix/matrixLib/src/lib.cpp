@@ -99,7 +99,7 @@ void fillMatrix(int **matrix, int row, int col) {
 void fillMatrix(double **matrix, int row, int col) {
     for (int i = 0; i < row; ++i) {
         for (int j = 0; j < col; ++j) {
-            cout << "Podaj liczbe do komorki x = " << i + 1 << " i y = " << j + 1 << ":\n";
+        cout << "Podaj liczbe do komorki x = " << i + 1 << " i y = " << j + 1 << ":\n";
             if(!(cin >> matrix[i][j])){
                 cout << "ERROR: nieodpowiedni znak.\n";
                 freeMatrix(matrix, row);

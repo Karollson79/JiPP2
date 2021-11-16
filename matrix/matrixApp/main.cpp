@@ -53,7 +53,7 @@ int main(int argc, char *argv[]) {
             } else {
                 // dla macierzy int
                 int **new_matrixA = createMatrix(row, col);
-                int **new_matrixB = createMatrix(row, col);
+int **new_matrixB = createMatrix(row, col);
                 cout << "Wyplenij macierz A: \n\n";
                 fillMatrix(new_matrixA, row, col);
                 cout << "Wyplenij macierz B: \n\n";
