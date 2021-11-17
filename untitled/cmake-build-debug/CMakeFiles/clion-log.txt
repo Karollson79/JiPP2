@@ -1,0 +1,1 @@
+CMakeLists.txt not found in /home/cinamon/studia/JIPP2/JiPP2/untitled Select CMakeLists.txt
