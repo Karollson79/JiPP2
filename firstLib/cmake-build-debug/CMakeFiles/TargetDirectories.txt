@@ -1,6 +1,0 @@
-/home/student/CLionProjects/JiPP2/firstLib/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/student/CLionProjects/JiPP2/firstLib/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/student/CLionProjects/JiPP2/firstLib/cmake-build-debug/App/CMakeFiles/rebuild_cache.dir
-/home/student/CLionProjects/JiPP2/firstLib/cmake-build-debug/App/CMakeFiles/edit_cache.dir
-/home/student/CLionProjects/JiPP2/firstLib/cmake-build-debug/Library/CMakeFiles/rebuild_cache.dir
-/home/student/CLionProjects/JiPP2/firstLib/cmake-build-debug/Library/CMakeFiles/edit_cache.dir
