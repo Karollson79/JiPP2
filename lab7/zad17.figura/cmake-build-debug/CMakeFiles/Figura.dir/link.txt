@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2021.1.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Figura.dir/objects.a
+C:\PROGRA~2\MINGW-~1\mingw32\bin\ar.exe cr CMakeFiles\Figura.dir/objects.a @CMakeFiles\Figura.dir\objects1.rsp
+C:\PROGRA~2\MINGW-~1\mingw32\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\Figura.dir/objects.a -Wl,--no-whole-archive -o Figura.exe -Wl,--out-implib,libFigura.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Figura.dir\linklibs.rsp

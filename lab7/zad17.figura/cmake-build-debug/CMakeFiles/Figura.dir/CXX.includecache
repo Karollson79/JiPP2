@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/papasmerf/Desktop/studia/jipp2/laby/zad17.figura/include/Figura.h
+string
+C:/Users/papasmerf/Desktop/studia/jipp2/laby/zad17.figura/include/string
+
+C:/Users/papasmerf/Desktop/studia/jipp2/laby/zad17.figura/main.cpp
+include/Figura.h
+C:/Users/papasmerf/Desktop/studia/jipp2/laby/zad17.figura/include/Figura.h
+iostream
+C:/Users/papasmerf/Desktop/studia/jipp2/laby/zad17.figura/iostream
+
+C:/Users/papasmerf/Desktop/studia/jipp2/laby/zad17.figura/src/Figura.cpp
+../include/Figura.h
+C:/Users/papasmerf/Desktop/studia/jipp2/laby/zad17.figura/include/Figura.h
+iostream
+C:/Users/papasmerf/Desktop/studia/jipp2/laby/zad17.figura/src/iostream
+
