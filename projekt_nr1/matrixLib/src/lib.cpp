@@ -216,8 +216,20 @@ double **transpozeMatrix(double **matrix_a, int rows, int columns) {
 
 int **powerMatrix(int **matrix_a, int rows, int columns, unsigned int power) {
     int **answer = matrix_a;
-    while (--power) {
-        answer = multiplyMatrix(answer, matrix_a, rows, columns, columns);
+    if (power == 0){
+        for(int i = 0; i < rows; ++i){
+            for(int j = 0; j < columns; ++j){
+                if(i == j){
+                    answer[i][j] = 1;
+                }else{
+                    answer[i][j] = 0;
+                }
+            }
+        }
+    }else{
+        while (--power) {
+            answer = multiplyMatrix(answer, matrix_a, rows, columns, columns);
+        }
     }
     return answer;
 }
