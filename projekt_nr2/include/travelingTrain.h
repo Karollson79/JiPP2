@@ -10,8 +10,8 @@ using namespace std;
 
 class Traveling : public Train{
 protected:
-    string numberOf;
+    int numberOfSeats;
 public:
-
+    virtual void displayTrain();
 };
 #endif //RECORDER_CARGO_H

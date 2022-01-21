@@ -8,9 +8,10 @@ using namespace std;
 #ifndef RECORDER_CARGO_H
 #define RECORDER_CARGO_H
 
-class Cargo : public Train{
+class Hotel : public Train{
 protected:
-    string whatTransporting;
+    int numberOfSeats;
+    string hotelClass;
 public:
 
 };
