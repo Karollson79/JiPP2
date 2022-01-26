@@ -3,7 +3,57 @@
 
 using namespace std;
 
-void Train::displayTrain() = 0;
+string Train::getRegistrationNumber() const{
+    return registrationNumber;
+}
+
+int Train::getPeronNumber() const {
+    return peronNumber;
+}
+
+time Train::getArrTime() const {
+    return arrivalTime;
+}
+
+string Train::getFromWhere() const {
+    return fromWhere;
+}
+
+string Train::getToWhere() const {
+    return toWhere;
+}
+
+void Train::setTrainStatus(const string &newTrainStatus) {
+    this->trainStatus = newTrainStatus;
+}
+
+void Train::setArrivalTime(const time &changeArrivalTime) {
+    this->arrivalTime = changeArrivalTime;
+}
+
+void Train::setDepartureTime(const time &changeDepartureTime) {
+    this->departueTime = changeDepartureTime;
+}
+
+void Train::setFromWhere(const string &changeArrival) {
+    this->fromWhere = changeArrival;
+}
+
+void Train::setToWhere(const string &changeDeparture) {
+    this->toWhere = changeDeparture;
+}
+
+void Train::setNumberOfWagons(const int &newNumberOfWagons) {
+    this->numberofWagons = newNumberOfWagons;
+}
+
+void Train::setRegistrationNumber(const string &newRegistrationNumber) {
+    this->registrationNumber = newRegistrationNumber;
+}
+
+void Train::setPeronNumber(const int &newPeronNumber) {
+    this->peronNumber = newPeronNumber;
+}
 /*
 
 Train::Train() :registrationNumber("not known"), trainStatus("not known"), peronNumber(0), fromWhere("not known"), toWhere("not known"),

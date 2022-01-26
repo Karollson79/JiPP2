@@ -12,6 +12,8 @@ class Cargo : public Train{
 protected:
     string whatTransporting;
 public:
-    virtual void displayTrain();
+    Cargo();
+    Cargo(string, string, int , string, string, time, time, int, string);
+    virtual void displayTrain() const;
 };
 #endif //RECORDER_CARGO_H
