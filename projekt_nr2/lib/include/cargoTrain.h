@@ -14,6 +14,6 @@ protected:
 public:
     Cargo();
     Cargo(string, string, int , string, string, time, time, int, string);
-    virtual void displayTrain() const;
+    virtual void displayTrain() ;
 };
 #endif //RECORDER_CARGO_H

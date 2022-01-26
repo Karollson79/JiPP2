@@ -15,6 +15,6 @@ protected:
 public:
     Hotel();
     Hotel(string, string, int , string, string, time, time, int, int, string);
-    virtual void displayTrain() const;
+    virtual void displayTrain() ;
 };
 #endif //RECORDER_CARGO_H

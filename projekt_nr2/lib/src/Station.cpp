@@ -197,7 +197,7 @@ void Station::findTrainsFromWhere(string from, string where) {
 }
 
 void Station::loadTrainsFromFile() {
-    ifstream input("../trainData.csv");
+    ifstream input("../../trainData.csv");
     if(input.is_open()){
         string line;
         while(getline(input, line)){
@@ -226,10 +226,11 @@ void Station::loadTrainsFromFile() {
                 depTime.hour = stoi(value);
                 getline(linestream, value, ';');
                 depTime.min = stoi(value);
+                getline(linestream, value, ';');
+                numOfWag = stoi(value);
                 getline(linestream, whatTransp, ';');
 
-                Cargo newTrain(regNum, trainStat, perNum, fromW, toW, arrTi, depTime, numOfWag, whatTransp);
-                this->addTrain(&newTrain);
+                this->trains.push_back(new Cargo(regNum, trainStat, perNum, fromW, toW, arrTi, depTime, numOfWag, whatTransp));
             }else if(type == "Traveling"){
 
                 string regNum, trainStat, fromW, toW;
@@ -253,9 +254,7 @@ void Station::loadTrainsFromFile() {
                 getline(linestream, value, ';');
                 numOfSeats = stoi(value);
 
-                Traveling newTrain(regNum, trainStat, perNum, fromW, toW, arrTi, depTime, numOfWag, numOfSeats);
-                this->addTrain(&newTrain);
-
+                this->trains.push_back(new Traveling(regNum, trainStat, perNum, fromW, toW, arrTi, depTime, numOfWag, numOfSeats));
             }else{
 
                 string regNum, trainStat, fromW, toW, hotClass;
@@ -280,8 +279,7 @@ void Station::loadTrainsFromFile() {
                 numOfSeats = stoi(value);
                 getline(linestream, hotClass, ';');
 
-                Hotel newTrain(regNum, trainStat, perNum, fromW, toW, arrTi, depTime, numOfWag, numOfSeats, hotClass);
-                this->addTrain(&newTrain);
+                this->trains.push_back(new Hotel(regNum, trainStat, perNum, fromW, toW, arrTi, depTime, numOfWag, numOfSeats, hotClass));
             }
 
         }

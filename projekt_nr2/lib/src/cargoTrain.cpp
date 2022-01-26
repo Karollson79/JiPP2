@@ -29,7 +29,7 @@ Cargo::Cargo(string regNumber, string trStat, int perNum, string froWh, string t
     whatTransporting = whatTransp;
 }
 
-void Cargo::displayTrain() const {
+void Cargo::displayTrain() {
     cout << "Registration number: "<< this->registrationNumber << endl <<
          "Train status: "<< this->trainStatus << endl <<
          "Peron number: "<< this->peronNumber << endl <<

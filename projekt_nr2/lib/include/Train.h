@@ -27,7 +27,7 @@ public:
 //    virtual Train() = 0;
 //    virtual Train(string, string, int , string, string, time, time, int) = 0;
 //    virtual ~Train() = 0;
-    virtual void displayTrain() const = 0;
+    virtual void displayTrain() = 0;
     string getRegistrationNumber() const;
     time getArrTime() const;
     int getPeronNumber() const;

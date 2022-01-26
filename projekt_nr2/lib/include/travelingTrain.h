@@ -14,6 +14,6 @@ protected:
 public:
     Traveling();
     Traveling(string, string, int , string, string, time, time, int, int);
-    virtual void displayTrain() const;
+    virtual void displayTrain() ;
 };
 #endif

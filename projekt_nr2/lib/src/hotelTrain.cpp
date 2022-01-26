@@ -28,7 +28,7 @@ Hotel::Hotel(string regNumber, string trStat, int perNum, string froWh, string t
     hotelClass = hotClas;
 }
 
-void Hotel::displayTrain() const{
+void Hotel::displayTrain() {
     cout << "Registration number: "<< this->registrationNumber << endl <<
     "Train status: "<< this->trainStatus << endl <<
     "Peron number: "<< this->peronNumber << endl <<
