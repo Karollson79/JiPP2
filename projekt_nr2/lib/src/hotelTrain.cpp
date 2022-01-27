@@ -41,12 +41,6 @@ void Hotel::displayTrain() {
     "Hotel class: " << this->hotelClass << endl << endl;
 }
 
-bool Hotel::operator>=(const time &rhs) const {
-    if(this->getDepTime().hour >= rhs.hour)
-        return true;
-    else if(this->getDepTime().hour == rhs.hour && this->getDepTime().min >= rhs.min)
-        return true;
-    return false;
-}
+
 
 

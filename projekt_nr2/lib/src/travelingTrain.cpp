@@ -39,12 +39,6 @@ void Traveling::displayTrain() {
     "Number of seats: " << this->numberOfSeats << endl << endl;
 }
 
-bool Traveling::operator>=(const time &rhs) const {
-    if(this->getDepTime().hour >= rhs.hour)
-        return true;
-    else if(this->getDepTime().hour == rhs.hour && this->getDepTime().min >= rhs.min)
-        return true;
-    return false;
-}
+
 
 

@@ -41,12 +41,6 @@ void Cargo::displayTrain() {
          "What is transporting: " << this->whatTransporting << endl << endl;
 }
 
-bool Cargo::operator>=(const time &rhs) const {
-    if(this->getDepTime().hour >= rhs.hour)
-        return true;
-    else if(this->getDepTime().hour == rhs.hour && this->getDepTime().min >= rhs.min)
-        return true;
-    return false;
-}
+
 
 

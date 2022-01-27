@@ -7,6 +7,7 @@
 
 #include <exception>
 #include "string"
+#include "iostream"
 
 using namespace std;
 
@@ -16,9 +17,9 @@ private:
 
 public:
     MyException (string exceptionText): exceptionText(exceptionText){}
-
-    const string what(){
-        return exceptionText;
+    friend ostream& operator<<(ostream& os, const MyException& e){
+        os << e.exceptionText;
+        return os;
     }
 };
 

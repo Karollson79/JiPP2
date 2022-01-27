@@ -28,7 +28,6 @@ public:
 //    virtual Train(string, string, int , string, string, time, time, int) = 0;
 //    virtual ~Train() = 0;
     virtual void displayTrain() = 0;
-    virtual bool operator>=(const time &rhs) const = 0;
 
     string getRegistrationNumber() const;
     time getArrTime() const;

@@ -38,7 +38,7 @@ int main(int argc, char *argv[]){
             }
         }
         catch(MyException &e){
-            cout << e.what() << endl;
+            cout << e << endl;
             return 0;
         }
         // main program
@@ -54,7 +54,7 @@ int main(int argc, char *argv[]){
                 if(!(cin >> numOfOp))
                     throw MyException("wrong option!");
             } catch (MyException &e) {
-                cout << e.what() << endl;
+                cout << e << endl;
                 return 0;
             }
             switch(numOfOp){
@@ -68,7 +68,7 @@ int main(int argc, char *argv[]){
                         if (!(cin >> regNum))
                             throw MyException("wrong argument of function!");
                     } catch (MyException &e) {
-                        cout << e.what() << endl;
+                        cout << e << endl;
                         return 0;
                     }
                     myStation.findTrainByRegNumber(regNum);
@@ -82,7 +82,7 @@ int main(int argc, char *argv[]){
                         if (!(cin >> regNumber >> newStatus))
                             throw MyException("wrong argument of function!");
                     } catch (MyException &e) {
-                        cout << e.what() << endl;
+                        cout << e << endl;
                         return 0;
                     }
                     myStation.editTrainStatus(regNumber, newStatus);
@@ -95,7 +95,7 @@ int main(int argc, char *argv[]){
                     if(!(cin >> arrTime.hour >> arrTime.min)){
                         throw MyException("wrong arguments!");
                     }}catch (MyException &e){
-                        cout << e.what() << endl;
+                        cout << e << endl;
                         return 0;
                     }
                     myStation.findTrainsAfterTime(arrTime);
@@ -109,7 +109,7 @@ int main(int argc, char *argv[]){
                             throw MyException("wrong arguments!");
                         }
                     }catch (MyException &e){
-                        cout << e.what() << endl;
+                        cout << e << endl;
                         return 0;
                     }
                     myStation.findTrainsOnPeron(peron);
@@ -122,7 +122,7 @@ int main(int argc, char *argv[]){
                             throw MyException("wrong arguments!");
                         }
                     }catch (MyException &e){
-                        cout << e.what() << endl;
+                        cout << e << endl;
                         return 0;
                     }
                     myStation.findTrainsFromWhere(from, to);
@@ -136,7 +136,7 @@ int main(int argc, char *argv[]){
                             throw MyException("wrong arguments!");
                         }
                     }catch (MyException &e){
-                        cout << e.what() << endl;
+                        cout << e << endl;
                         return 0;
                     }
                     myStation.delTrain(regNum);
@@ -206,7 +206,7 @@ int main(int argc, char *argv[]){
             }
         }
         catch(MyException &e){
-            cout << e.what() << endl;
+            cout << e << endl;
             return 0;
         }
         cout << "its not right argument! :(";
@@ -217,7 +217,7 @@ int main(int argc, char *argv[]){
             }
         }
         catch(MyException &e){
-            cout << e.what() << endl;
+            cout << e << endl;
             return 0;
         }
         cout << "its also not right argument! :(";

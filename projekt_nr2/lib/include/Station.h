@@ -37,6 +37,7 @@ public:
     void displayTrains();
 
     void loadTrainsFromFile();
+
 };
 
 #endif //MATRIXCALC_STATION_H

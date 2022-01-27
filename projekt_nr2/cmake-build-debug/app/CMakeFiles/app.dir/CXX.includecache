@@ -11,6 +11,8 @@ exception
 -
 string
 ../lib/include/string
+iostream
+../lib/include/iostream
 
 C:/Users/papasmerf/Desktop/studia/jipp2/laby/projekt_nr2/app/main.cpp
 ../lib/include/Station.h
