@@ -16,5 +16,6 @@ public:
     Hotel();
     Hotel(string, string, int , string, string, time, time, int, int, string);
     virtual void displayTrain() ;
+    virtual bool operator>=(const time &rhs)const;
 };
 #endif //RECORDER_CARGO_H

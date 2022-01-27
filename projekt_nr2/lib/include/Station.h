@@ -21,27 +21,22 @@ public:
     Station();
     ~Station();
 
-    void addTrain(Hotel *newTrain);
-    void addTrain(Cargo *newTrain);
-    void addTrain(Traveling *newTrain);
+    void addTrain(string regNum, string trStat, int perNum, string frWh, string toWh, time arrTim, time depTim, int noWag, int noSea, string classHott);
+    void addTrain(string regNum, string trStat, int perNum, string frWh, string toWh, time arrTim, time depTim, int noWag, string whatTransp);
+    void addTrain(string regNum, string trStat, int perNum, string frWh, string toWh, time arrTim, time depTim, int noWag, int noSeats);
 
     void delTrain(string registrationNumber);
 
     void editTrainStatus(string registrationNumber, string newTrainStatus);
-    void editPeronNumber(string registrationNumber, int newPeronNumber);
-    void editArrivalTime(string registrationNumber, time newArrTime);
-    void editDepartureTime(string registrationNumber, time newDepTime);
-    void editNumberOfWagons(string registrationNumber, int newNoWagons);
 
     int findTrain(string registrationNumber);
+    void findTrainByRegNumber(string registrationNumber);
     void findTrainsAfterTime(time arrTime);
     void findTrainsOnPeron(int peronNumber);
     void findTrainsFromWhere(string from, string where);
+    void displayTrains();
 
-    void saveTrainsToFile();
     void loadTrainsFromFile();
-
-
 };
 
 #endif //MATRIXCALC_STATION_H

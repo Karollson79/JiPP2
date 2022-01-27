@@ -6,11 +6,27 @@
 
 #IncludeRegexTransform: 
 
+../lib/include/Execption.h
+exception
+-
+string
+../lib/include/string
+
 C:/Users/papasmerf/Desktop/studia/jipp2/laby/projekt_nr2/app/main.cpp
 ../lib/include/Station.h
 C:/Users/papasmerf/Desktop/studia/jipp2/laby/projekt_nr2/lib/include/Station.h
+../lib/include/cargoTrain.h
+C:/Users/papasmerf/Desktop/studia/jipp2/laby/projekt_nr2/lib/include/cargoTrain.h
+../lib/include/travelingTrain.h
+C:/Users/papasmerf/Desktop/studia/jipp2/laby/projekt_nr2/lib/include/travelingTrain.h
+../lib/include/hotelTrain.h
+C:/Users/papasmerf/Desktop/studia/jipp2/laby/projekt_nr2/lib/include/hotelTrain.h
+../include/Execption.h
+C:/Users/papasmerf/Desktop/studia/jipp2/laby/projekt_nr2/include/Execption.h
 iostream
 C:/Users/papasmerf/Desktop/studia/jipp2/laby/projekt_nr2/app/iostream
+string
+C:/Users/papasmerf/Desktop/studia/jipp2/laby/projekt_nr2/app/string
 
 C:/Users/papasmerf/Desktop/studia/jipp2/laby/projekt_nr2/lib/include/Station.h
 string

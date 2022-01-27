@@ -15,5 +15,6 @@ public:
     Traveling();
     Traveling(string, string, int , string, string, time, time, int, int);
     virtual void displayTrain() ;
+    virtual bool operator>=(const time &rhs)const;
 };
 #endif

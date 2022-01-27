@@ -14,7 +14,7 @@ using namespace std;
  */
 
 Station::Station() {
-
+    cout << "tutaj konstruktor!\n";
 }
 
 /*
@@ -22,8 +22,7 @@ Station::Station() {
  */
 
 Station::~Station() {
-
-
+    cout << "tutaj destruktor!\n";
 }
 
 /*
@@ -31,8 +30,9 @@ Station::~Station() {
  * @parm train which will be add
  */
 
-void Station::addTrain(Cargo *newTrain) {
-    trains.push_back(newTrain);
+void Station::addTrain(string regNum, string trStat, int perNum, string frWh, string toWh, time arrTim, time depTim,
+                       int noWag, string whatTransp) {
+    this->trains.push_back(new Cargo(regNum, trStat, perNum, frWh, toWh, arrTim, depTim, noWag, whatTransp));
 }
 
 /*
@@ -40,19 +40,19 @@ void Station::addTrain(Cargo *newTrain) {
  * @param train which will be add
  */
 
-void Station::addTrain(Hotel *newTrain) {
-    trains.push_back(newTrain);
+void Station::addTrain(string regNum, string trStat, int perNum, string frWh, string toWh, time arrTim, time depTim,
+                       int noWag, int noSea, string classHott) {
+    trains.push_back(new Hotel(regNum, trStat, perNum, frWh, toWh, arrTim, depTim, noWag, noSea, classHott));
 }
-
 /*
  * @brief add Traveling train to the vector of trains
  * @param train which will be add
  */
 
-void Station::addTrain(Traveling *newTrain) {
-    trains.push_back(newTrain);
+void Station::addTrain(string regNum, string trStat, int perNum, string frWh, string toWh, time arrTim, time depTim,
+                       int noWag, int noSeats) {
+    trains.push_back(new Traveling(regNum, trStat, perNum, frWh, toWh, arrTim, depTim, noWag, noSeats));
 }
-
 /*
  *  @brief finds train by registration number
  *  @returns index if found or -1 if not
@@ -76,7 +76,11 @@ int Station::findTrain(string registrationNumber) {
 
 void Station::delTrain(string registrationNumber) {
         const int position = Station::findTrain(registrationNumber);
-        trains.erase(trains.begin() + position);
+        if(position != -1){
+            trains.erase(trains.begin() + position);
+        }else
+            cout << "we cant find that train!\n";
+
 }
 
 /*
@@ -87,53 +91,12 @@ void Station::delTrain(string registrationNumber) {
 
 void Station::editTrainStatus(string registrationNumber, string newTrainStatus) {
     int pos = findTrain(registrationNumber);
-    trains[pos]-> setTrainStatus(newTrainStatus);
+    if(pos != -1){
+        trains[pos]-> setTrainStatus(newTrainStatus);
+    }else
+        cout << "we cant find that train!\n";
 }
-
 /*
- * @brief edits arrival time of the train
- * @param registration number of train which will be changed
- * @param new arrival time
- */
-
-void Station::editArrivalTime(string registrationNumber, time newArrTime) {
-    int pos = findTrain(registrationNumber);
-    trains[pos]-> setArrivalTime(newArrTime);
-}
-
-/*
- * @brief edits departure time of the train
- * @param registration number of train which will be changed
- * @param new departure time
- */
-
-void Station::editDepartureTime(string registrationNumber, time newDepTime) {
-    int pos = findTrain(registrationNumber);
-    trains[pos] -> setDepartureTime(newDepTime);
-}
-
-/*
- * @brief edits number of peron where train stops
- * @param registration number of train which will be changed
- * @param new peron number
- */
-
-void Station::editPeronNumber(string registrationNumber, int newPeronNumber) {
-    int pos = findTrain(registrationNumber);
-    trains[pos] -> setPeronNumber(newPeronNumber);
-}
-
-/*
- * @brief edits number of wagons
- * @param registration number of train which will be changed
- * @param new number of wagons
- */
-
-void Station::editNumberOfWagons(string registrationNumber, int newNoWagons) {
-    int pos = findTrain(registrationNumber);
-    trains[pos] ->setPeronNumber(newNoWagons);
-}
-
 /*
  * @brief finds all trains that come after or equal give time
  * @param arrival time
@@ -252,6 +215,8 @@ void Station::loadTrainsFromFile() {
                 getline(linestream, value, ';');
                 depTime.min = stoi(value);
                 getline(linestream, value, ';');
+                numOfWag = stoi(value);
+                getline(linestream, value, ';');
                 numOfSeats = stoi(value);
 
                 this->trains.push_back(new Traveling(regNum, trainStat, perNum, fromW, toW, arrTi, depTime, numOfWag, numOfSeats));
@@ -276,20 +241,31 @@ void Station::loadTrainsFromFile() {
                 getline(linestream, value, ';');
                 depTime.min = stoi(value);
                 getline(linestream, value, ';');
+                numOfWag = stoi(value);
+                getline(linestream, value, ';');
                 numOfSeats = stoi(value);
                 getline(linestream, hotClass, ';');
 
                 this->trains.push_back(new Hotel(regNum, trainStat, perNum, fromW, toW, arrTi, depTime, numOfWag, numOfSeats, hotClass));
             }
-
         }
     }else{
-        //error
+        cout << "ERROR: cant open file!\n";
     }
-
     input.close();
 }
 
+void Station::displayTrains() {
+    for(auto train : trains){
+        train->displayTrain();
+    }
+}
 
-
-
+void Station::findTrainByRegNumber(string registrationNumber) {
+    int pos = findTrain(registrationNumber);
+    if(pos != -1){
+        this->trains[pos]->displayTrain();
+    }else{
+        cout << "we cant find that train!\n";
+    }
+}

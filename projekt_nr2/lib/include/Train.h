@@ -28,21 +28,16 @@ public:
 //    virtual Train(string, string, int , string, string, time, time, int) = 0;
 //    virtual ~Train() = 0;
     virtual void displayTrain() = 0;
+    virtual bool operator>=(const time &rhs) const = 0;
+
     string getRegistrationNumber() const;
     time getArrTime() const;
+    time getDepTime() const;
     int getPeronNumber() const;
     string getFromWhere() const;
     string getToWhere() const;
 
-    void setRegistrationNumber(const string &newRegistrationNumber);
     void setTrainStatus(const string &newTrainStatus);
-    void setPeronNumber(const int &newPeronNumber);
-    void setFromWhere(const string &changeArrival);
-    void setToWhere(const string &changeDeparture);
-    void setArrivalTime(const time &changeArrivalTime);
-    void setDepartureTime(const time &changeDepartureTime);
-    void setNumberOfWagons(const int &newNumberOfWagons);
-
 };
 
 #endif
